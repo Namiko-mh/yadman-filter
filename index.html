@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pagenumbers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pagenumbers button {
+        width: 50px;
+        height: 50px;
+
+        appearance: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        background-color: #44aaee;
+
+        margin: 5px;
+        transition: 0.4s;
+
+        color: #fff;
+        font-size: 18px;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .pagenumbers button:hover {
+        background-color: #44eeaa;
+      }
+
+      .pagenumbers button.active {
+        background-color: #44eeaa;
+        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <label for="allCheckbox">All</label>
+    <input type="checkbox" id="allCheckbox" name="all" onchange="toggleAllCheckboxes(this)">
+    <form action="#">
+      <br>
+      <label for="city1">city1</label>
+      <input type="checkbox" name="city1" id="city1" onchange="change()" />
+      <br />
+      <label for="city2">city2</label>
+      <input type="checkbox" name="city2" id="city2" onchange="change()" />
+      <br />
+      <label for="city3">city3</label>
+      <input type="checkbox" name="city3" id="city3" onchange="change()" />
+      <br />
+      <label for="city4">city4</label>
+      <input type="checkbox" name="city4" id="city4" onchange="change()" />
+      <br />
+      <label for="city5">city5</label>
+      <input type="checkbox" name="city5" id="city5" onchange="change()" />
+    </form>
+
+    <section>
+      <div class="container">
+        <div class="row"></div>
+      </div>
+    </section>
+
+    <div class="pagenumbers" id="pagination"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
